@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body{
+    background: #c0d1fd;
+}
+.side-bar{
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter:  blur(15px);
+	width: 290px;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: -100%;
+	overflow-y: auto;
+	transition: 0.6s ease;
+	transition-property: left;
+}
+
+.side-bar.active{
+	left: 0;
+}
+
+.side-bar .menu{
+	width: 100%;
+	margin-top: 80px;
+}
+
+.side-bar .menu .item{
+	position: relative;
+	cursor: pointer;
+}
+
+.side-bar .menu .item a{
+	color: #fff;
+	font-size: 16px;
+	text-decoration: none;
+	display: block;
+	padding: 5px 30px;
+	line-height: 60px;
+}
+
+.side-bar .menu .item a:hover{
+	background: #8621F8;
+	transition: 0.3s ease;
+}
+
+.side-bar .menu	.item i{
+	margin-right: 15px;
+}
+
+.side-bar .menu .item a .dropdown{
+	position: absolute;
+	right: 0;
+	margin: 20px;
+	transition: 0.3s ease;
+
+}
+
+.side-bar .menu .item .sub-menu{
+	background: rgba(255, 255, 255, 0.169);
+	display: none;
+}
+
+.side-bar .menu .item .sub-menu a{
+	padding-left: 80px;
+}
+
+.rotate{
+	transform: rotate(90deg);
+}
+
+.close-btn{
+	position: absolute;
+	color: #fff;
+	font-size: 20px;
+	right: 0;
+	margin: 25px;
+	cursor: pointer;
+}
+
+.menu-btn{
+	position: absolute;
+	color: #fff;
+	font-size: 20px;
+	margin: 25px;
+	cursor: pointer;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+}
+
+section .imgFondo{
+    position:relative;
+    width: 22%;
+    height: 100%;
+}
+
+section .imgFondo img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section .Register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 450px;
+    min-height: 100vh;
+    
+}
+
+section .Register .forms{
+    width: 70%;
+    background:#fff;
+    border-radius: 25px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.3);
+
+}
+.forms form{
+    padding: 30px 50px 30px 50px;   
+}
+
+  /* Ubicar en columnas los contenedores */
+.forms form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Register .forms h1{
+    font-size: 35px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    user-select: none;
+    border-radius: 15px 15px 0 0;
+    background: linear-gradient(-135deg, #8621F8, #82F2EA);
+}
+
+.forms form .fields .input-field{
+    display: flex;
+    width: calc(100% / 2 - 15px);
+    flex-direction: column;
+    margin: 4px 0;   
+}
+
+.input-field label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+    margin-left: 15px;
+}
+
+.input-field input, select{
+    padding-left: 20px;
+    padding-right: 10px;
+    outline: none;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(139, 136, 136);
+    border-radius: 25px;
+    border: 1px solid #aaa;
+    padding-right: 3px; /*es el espacio para agrandar el contenedor */
+    height: 42px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.field{
+    margin-left: 26%;
+}
+
+button{
+    color: #fff;
+    border-radius: 25px;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(-135deg, #8621F8, #82F2EA);
+    transition: all 0.3s ease;    
+}
+button:active{
+    transform: scale(0.95);
+}
+
+/* Diseno del POPUP */
+.modal-container{
+    display: flex;
+    background: rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0; /*es para esconder el popup, si lo quieres ver cambialo a 1*/
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.show {
+    pointer-events: auto;
+    opacity: 1;
+}  
+.modal{
+    background-color: #fff;
+    width: 600px;
+    max-width: 70%;
+    padding: 30px 50px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.modal p{
+  font-size: 30px;
+}

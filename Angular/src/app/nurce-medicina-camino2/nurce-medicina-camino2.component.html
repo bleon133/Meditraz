@@ -1,0 +1,52 @@
+<body>
+	<section class="request">
+        <div class="container">
+
+            <div class="topBox">
+                <button (click)="return()" role="link"><i class="fa-solid fa-angle-left"></i></button>
+                <span class="first-title">Medicamentos en Camino</span>
+            </div>
+            
+            <form>
+                <div class="form first">
+                    <div class="nurse and destination">
+                        <span class="title">Registro de Trazabilidada</span>
+                        <div class="fields">
+
+                            <div class="input-field">
+                                <label>Nombre de Quién Entrega</label>
+                                <input type="text" value={{personaEntrega()}} [attr.disabled]="true">
+                            </div>
+
+
+                            <div class="input-field">
+                                <label>Nombre de Quién Transporta</label>
+                                <input type="text" value={{personaTransporta()}} [attr.disabled]="true">
+                            </div>
+
+                            <div class="input-field">
+                                <label>Nombre de Quién Recibirá</label>
+                                <input type="text" value={{personaRecibe()}} [attr.disabled]="true">
+                            </div>
+
+                            <div class="input-field">
+                                <label>Área de Salida</label>
+                                <input type="text" value="Farmacia/1" [attr.disabled]="true">
+                            </div>
+                            <div class="input-field">
+                                <label>Área de Recepción</label>
+                                <input type="text" value={{quirofano()}} [attr.disabled]="true">
+                            </div>
+                            <div class="input-field">
+                                <label>Transporte del Medicamento</label>
+                                <input type="text" value={{equipo()}} [attr.disabled]="true">
+                            </div>
+
+                        </div>    
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <h2>Por favor espere a que lleguen los medicamentos.</h2>
+</body>

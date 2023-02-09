@@ -1,0 +1,77 @@
+
+<div class="menu-btn">
+    <i class="fas fa-bars"></i>
+</div>
+<div class="side-bar">
+    <div class='close-btn'>
+        <i class="fas fa-times"></i>
+    </div>
+    <div class="menu">
+        <div class="item"><a><i class="fa-solid fa-house"></i>Inicio</a></div>
+        <div class="item"><a (click)="perfil()"><i class="fa-solid fa-person"></i>Perfil de Usuario</a></div>
+        <div class="item">
+            <a class="sub-btn"><i class="fa-solid fa-clipboard-list"></i>Listas y Registros<i class="fas fa-angle-right dropdown"></i></a>
+            <div class="sub-menu">
+                <a (click)="listaMedicamentos()" class="sub-item">Lista Medicina</a>
+                <a (click)="listaEquipos()"class="sub-item">Lista Equipos</a>
+                <a  (click)="registroMedicinas()">Registro Medicina</a>
+                <a  (click)="registrarTransporte()">Registro Equipos</a>
+            </div>
+        </div>
+        <div class="item"><a (click)="solicitarMedicamento()"><i class="fa-solid fa-capsules"></i>Solicitar Medicina</a></div>
+        <div class="item">
+            <a class="sub-btn"><i class="fa-solid fa-person-walking"></i>Trazabilidad<i class="fas fa-angle-right dropdown"></i></a>
+            <div class="sub-menu">
+                <a  (click)="solicitudes()" class="sub-item">Solicitud Medicina</a>
+                <a (click)="gestionMedicina()" class="sub-item">Gestión Medicina</a>
+                <a (click)="medicinaCamino()" class="sub-item">Medicina Camino</a>
+                <a (click)="entregarMedicina()" class="sub-item">Entrega Medicina</a>
+                <a (click)="regresarEquipos()" class="sub-item">Regreso Equipo</a> 
+            </div>
+        </div>
+        <div class="item"><a (click)="service.logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i>Salir</a></div>
+    </div>
+</div>
+
+
+<!-- REGISTRO DE EQUIPOS -->
+<section>
+    <div class="Register">
+        <div class="forms">   
+            <h1>Registro de equipos de transporte</h1>
+            <form [formGroup]="equipoTransForm" (ngSubmit)="onSubmit()">
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Código</label>
+                        <input type="text" formControlName="codeEquip">
+                    </div>
+                    <div class="input-field">
+                        <label>Nombre</label>
+                        <input type="text" formControlName="nameTranspEquip">
+                    </div>             
+                    <div class="input-field">
+                        <label>Área/Bodega</label>
+                        <select required formControlName="idEquipStorageArea">
+                            <option disabled selected>Selec. Área/Bodega</option>
+                            <option value="1">Almacén Equipos Biomédicos/1</option>
+                            <option value="2">Almacén Equipos Biomédicos/2</option>
+                        </select>
+                    </div>
+                </div><!--fields-->
+                <button class ="field" id="open">Guardar</button>      	
+            </form>
+        </div> <!--forms-->
+    </div><!--Register-->
+    <div class="imgFondo">
+        <img src="./assets/smart_medicine_main-800x450.jpg">
+    </div>
+</section> <!-- REGISTRO DE EQUIPOS -->
+
+<div class="field">
+    <div class="modal-container" id="modal_container">
+        <div class="modal">
+            <p>¡Ingreso de equipo de transporte exitoso!</p>
+            <button id="close">cerrar</button>
+        </div><!-- modal -->
+    </div>
+</div><!-- field -->

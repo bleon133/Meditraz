@@ -1,0 +1,131 @@
+
+
+<div class="menu-btn" style="margin-top: 20px; margin-left: 20px; size: 25px;">
+    <i class="fas fa-bars"></i>
+</div>
+<div class="side-bar">
+    <div class='close-btn'>
+        <i class="fas fa-times"></i>
+    </div>
+    <div class="menu">
+        <div class="item"><a (click)="inicio()"><i class="fa-solid fa-house"></i>Inicio</a></div>
+        <div class="item"><a (click)="perfil()"><i class="fa-solid fa-person"></i>Perfil de Usuario</a></div>
+        <div class="item">
+            <a class="sub-btn"><i class="fa-solid fa-clipboard-list"></i>Listas y Registros<i class="fas fa-angle-right dropdown"></i></a>
+            <div class="sub-menu">
+                <a (click)="listaMedicamentos()" class="sub-item">Lista Medicina</a>
+                <a (click)="listaEquipos()"class="sub-item">Lista Equipos</a>
+                <a  (click)="registroMedicinas()">Registro Medicina</a>
+                <a  (click)="registrarTransporte()">Registro Equipos</a>
+            </div>
+        </div>
+        <div class="item"><a (click)="solicitarMedicamento()"><i class="fa-solid fa-capsules"></i>Solicitar Medicina</a></div>
+        <div class="item">
+            <a class="sub-btn"><i class="fa-solid fa-person-walking"></i>Trazabilidad<i class="fas fa-angle-right dropdown"></i></a>
+            <div class="sub-menu">
+                <a  (click)="solicitudes()" class="sub-item">Solicitud Medicina</a>
+                <a (click)="gestionMedicina()" class="sub-item">Gestión Medicina</a>
+                <a (click)="medicinaCamino()" class="sub-item">Medicina Camino</a>
+                <a (click)="entregarMedicina()" class="sub-item">Entrega Medicina</a>
+                <a (click)="regresarEquipos()" class="sub-item">Regreso Equipo</a> 
+            </div>
+        </div>
+        <div class="item"><a (click)="service.logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i>Salir</a></div>
+    </div>
+</div>
+
+
+
+<body>
+    <section class="request"> 
+        <div class="container">
+            <div class="topBox">
+                <span class="first-title">Solicitar Medicamentos</span>
+            </div>
+            <form [formGroup]="requestMedicine" (ngSubmit)="onSubmit()">
+                <div class="form first">
+                    <div class="nurse and destination">
+                        <span class="title">Jefe de Enfermería y Destino</span>
+                        <div class="fields">
+
+                            <div class="input-field">
+                                <label>Jefe de Enfermería</label>
+                                <input type="text" placeholder={{enfermeraNombre()}} [disabled]="true">
+                            </div>
+                            <div class="input-field">
+                                <label>Zona</label>
+                                <select  matInput placeholder="zona" required>
+                                    <option disabled selected>Selec. zona</option>
+                                    <option value = "1">Quirófano</option>
+                                </select>
+                            </div>
+
+
+                            <div class="input-field">
+                                <label>Número de Quirófano</label>
+                                <select  matInput placeholder="numero" formControlName="FKnumberOperating">
+                                    <option disabled selected>Selec. Número</option>
+                                    <option value = "1">1</option>
+                                    <option value = "2">2</option>
+                                    <option value = "3">3</option>
+                                </select>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="medication order">
+                        <span class="title">Pedidos de Medicamentos</span>
+                        <div class="fields">
+
+                            <div class="input-field">
+                                <label>Cantidad Med. #1</label>
+                                <input type="number" matInput placeholder="0" formControlName="amountRequired" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label> Nombre comercial - Laboratorio Med. #1</label>
+                                <select formControlName="FkMedicineOne" >
+                                    <option disabled selected>Selec. Medicamento</option>
+                                    <option *ngFor="let requestMedicine of dataSource" [ngValue]="requestMedicine.idStoredMedicines">
+                                         {{requestMedicine.tradename }} - {{requestMedicine.laboratoryManufacturer}} </option>
+                                </select> 
+                            </div>
+
+                            <div class="input-field">
+                                <label>Cantidad Med. #1</label>
+                                <input type="number" matInput placeholder="0"  formControlName="amountRequiredTwo">
+                            </div>
+
+                            <div class="input-field">
+                                <label>Nombre comercial - Laboratorio Med. #2</label>
+                                <select  matInput placeholder="nombreComercial2" formControlName="FkMedicineTwo">
+                                    <option disabled selected>Selec. Medicamento</option>
+                                    <option *ngFor="let requestMedicine of dataSource" [ngValue]="requestMedicine.idStoredMedicines">
+                                         {{requestMedicine.tradename}} </option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-field">
+                                <label>Cantidad Med. #3</label>
+                                <input type="number" matInput placeholder="0" formControlName="amountRequiredThree">
+                            </div>
+
+                            <div class="input-field">
+                                <label>Nombre comercial - Laboratorio Med. #3</label>
+                                <select  matInput placeholder="nombreComercial3" formControlName="FkMedicineThree">
+                                    <option disabled selected>Selec. Medicamento</option>
+                                    <option *ngFor="let requestMedicine of dataSource" [ngValue]="requestMedicine.idStoredMedicines">
+                                         {{requestMedicine.tradename}} </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="buttons">  
+                            <button class="sumbit" role="link">
+                                <span class="btnText">Crear</span>
+                            </button>
+                        </div>
+                    </div> 
+                </div>
+            </form>
+        </div>
+    </section>
+</body>

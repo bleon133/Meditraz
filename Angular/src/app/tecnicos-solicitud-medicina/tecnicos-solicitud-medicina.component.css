@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+h1{
+    text-align: center;
+    font-size: 45px;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+body{
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#main-container{
+    margin: 0px auto;
+    width:1040px;
+    height: 500px;
+    overflow: auto;
+}
+
+.equipTable{
+    background-color: white;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td{
+    padding: 20px;
+}
+
+th{
+    background-color: #8621F8;
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color: #ddd;
+}
+
+tr:hover td{
+    background-color: #9B4BF4;
+    color: white;
+}
+.watchBtn{
+    color: #fff;
+    border-radius: 25px;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 15px;
+    width: 110px;
+    cursor: pointer;
+    background: linear-gradient(-135deg, #8621F8, #82F2EA);
+    transition: all 0.3s ease;    
+}
+.watchBtn:active{
+    transform: scale(0.95);
+}

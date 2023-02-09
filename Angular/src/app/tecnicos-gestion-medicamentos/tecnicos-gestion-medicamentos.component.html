@@ -1,0 +1,39 @@
+<h1> Gestión de Medicamentos</h1>
+
+<div id="main-container">
+    <table mat-table [dataSource]="dataSource" class="equipTable">
+
+		<ng-container matColumnDef="orderNumber">
+			<th mat-header-cell *matHeaderCellDef> Número de Pedido </th>
+			<td mat-cell *matCellDef="let element"> {{element.orderNumber}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="enfermera">
+			<th mat-header-cell *matHeaderCellDef>  Jefa de Enfermería </th>
+			<td mat-cell *matCellDef="let element"> {{enfermeraNombre(element.fkUserRequest)}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="zona">
+			<th mat-header-cell *matHeaderCellDef>  Zona </th>
+			<td mat-cell *matCellDef="let element"> Quirofano / Oftalmología </td>
+		</ng-container>
+
+		<ng-container matColumnDef="fKnumberOperating">
+			<th mat-header-cell *matHeaderCellDef> Número de Zona </th>
+			<td mat-cell *matCellDef="let element"> {{element.fKnumberOperating}} </td>
+		</ng-container>
+
+ 
+		<ng-container matColumnDef="buttons">
+			<th mat-header-cell *matHeaderCellDef> Seleccionar </th>
+			<td mat-cell *matCellDef="let element"> 
+				<button class="watchBtn" (click)="medicinaCamino(element.fkMedicineOne, element.fkMedicineTwo, element.fkMedicineThree, element.fKnumberOperating, element.idRequest)">Observar</button>
+			</td>
+		</ng-container>
+
+
+		<tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+		<tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+
+	</table>
+</div>

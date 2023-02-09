@@ -1,0 +1,95 @@
+
+<div class="menu-btn">
+    <i class="fas fa-bars"></i>
+</div>
+<div class="side-bar">
+    <div class='close-btn'>
+        <i class="fas fa-times"></i>
+    </div>
+    <div class="menu">
+        <div class="item"><a><i class="fa-solid fa-house"></i>Inicio</a></div>
+        <div class="item"><a (click)="perfil()"><i class="fa-solid fa-person"></i>Perfil de Usuario</a></div>
+        <div class="item">
+            <a class="sub-btn"><i class="fa-solid fa-clipboard-list"></i>Listas y Registros<i class="fas fa-angle-right dropdown"></i></a>
+            <div class="sub-menu">
+                <a (click)="listaMedicamentos()" class="sub-item">Lista Medicina</a>
+                <a (click)="listaEquipos()"class="sub-item">Lista Equipos</a>
+                <a  (click)="registroMedicinas()">Registro Medicina</a>
+                <a  (click)="registrarTransporte()">Registro Equipos</a>
+            </div>
+        </div>
+        <div class="item"><a (click)="solicitarMedicamento()"><i class="fa-solid fa-capsules"></i>Solicitar Medicina</a></div>
+        <div class="item">
+            <a class="sub-btn"><i class="fa-solid fa-person-walking"></i>Trazabilidad<i class="fas fa-angle-right dropdown"></i></a>
+            <div class="sub-menu">
+                <a  (click)="solicitudes()" class="sub-item">Solicitud Medicina</a>
+                <a (click)="gestionMedicina()" class="sub-item">Gestión Medicina</a>
+                <a (click)="medicinaCamino()" class="sub-item">Medicina Camino</a>
+                <a (click)="entregarMedicina()" class="sub-item">Entrega Medicina</a>
+                <a (click)="regresarEquipos()" class="sub-item">Regreso Equipo</a> 
+            </div>
+        </div>
+        <div class="item"><a (click)="service.logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i>Salir</a></div>
+    </div>
+</div>
+
+
+<h1>Lista de Medicamentos</h1>
+<div id="main-container">
+	<table mat-table [dataSource]="dataSource" class="equipTable">
+
+		<mat-checkbox matColumnDef="codeMedicine">
+			<th mat-header-cell *matHeaderCellDef> Código </th>
+			<td mat-cell *matCellDef="let element"> {{element.codeMedicine}} </td> 
+		</mat-checkbox>>
+
+		<ng-container matColumnDef="tradename">
+			<th mat-header-cell *matHeaderCellDef> Nombre Comercial </th>
+			<td mat-cell *matCellDef="let element"> {{element.tradename}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="expirationDate">
+			<th mat-header-cell *matHeaderCellDef> Vencimiento </th>
+			<td mat-cell *matCellDef="let element"> {{element.expirationDate}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="temperature">
+			<th mat-header-cell *matHeaderCellDef> Temp. </th>
+			<td mat-cell *matCellDef="let element"> {{element.temperature}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="lot">
+			<th mat-header-cell *matHeaderCellDef> Lote </th>
+			<td mat-cell *matCellDef="let element"> {{element.lot}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="laboratoryManufacturer">
+			<th mat-header-cell *matHeaderCellDef> Laboratorio </th>
+			<td mat-cell *matCellDef="let element"> {{element.laboratoryManufacturer}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="medicineEntryAmount">
+			<th mat-header-cell *matHeaderCellDef> Cantidad </th>
+			<td mat-cell *matCellDef="let element"> {{element.medicineEntryAmount}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="medicineEntryDate">
+			<th mat-header-cell *matHeaderCellDef> Fecha Ingreso </th>
+			<td mat-cell *matCellDef="let element"> {{element.medicineEntryDate}} </td>
+		</ng-container>
+		<ng-container matColumnDef="idAreaMedic">
+			<th mat-header-cell *matHeaderCellDef> Bodega </th>
+			<td mat-cell *matCellDef="let element"> {{element.idAreaMedic}} </td>
+		</ng-container>
+		<ng-container matColumnDef="specificationMedic">
+			<th mat-header-cell *matHeaderCellDef> Especificación </th>
+			<td mat-cell *matCellDef="let element"> {{element.specificationMedic}} </td>
+		</ng-container>
+			
+		
+
+		<tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+		<tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+
+	</table>
+</div>

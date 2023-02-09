@@ -1,0 +1,104 @@
+<body>
+    <section class="request">
+        <div class="container">
+            <div class="topBox">
+                <button (click)="regresarLista()" role="link"><i class="fa-solid fa-angle-left"></i></button><span class="first-title">Solicitar Medicamentos</span>
+            </div>
+
+
+
+            <form [formGroup]="resumenMedicina">
+                <div class="form first">
+                    <div class="nurse and destination">
+
+                        <span class="title">Jefe de Enfermería y Destino</span>
+                        <div class="fields">
+
+
+                            <div class="input-field">
+                                <label>Jefe de Enfermería</label>
+                                <input type="text" formControlName= "nameEnfermera" [attr.disabled]="true">
+                            </div>
+                        
+                            <div class="input-field">
+                                <label>Zona</label>
+                                <input type="text" formControlName= "zona" [attr.disabled]="true">
+                            </div>
+
+                            <div class="input-field">
+                                <label>Número de Quirófano</label>
+                                <input type="text" formControlName= "numeroQuirofano" [attr.disabled]="true">
+                            </div>
+
+                            <div class="medication order">
+                                <span class="title">Pedidos de Medicamentos</span>
+                                <div class="fields">
+
+                                    <div class="input-field">
+                                        <label>Cantidad Med. #1</label>
+                                        <input type="text" placeholder={{cantidades1()}} [attr.disabled]="true">
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>Nombre Comercial Med. #1</label>
+                                        <input type="text" placeholder={{nameComercial1()}} [attr.disabled]="true">
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>Laboratorio Fabricante Med. #1</label>
+                                        <input type="text" placeholder={{labo1()}} [attr.disabled]="true">
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>Cantidad Med. #2</label>
+                                        <input type="text" placeholder={{cantidades2()}} [attr.disabled]="true">
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>Nombre Comercial Med. #2</label>
+                                        <input type="text" placeholder={{nameComercial2()}} [attr.disabled]="true">
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>Laboratorio Fabricante Med. #2</label>
+                                        <input type="text" placeholder={{labo2()}} [attr.disabled]="true">
+                                    </div>
+                                    <div class="input-field">
+                                        <label>Cantidad Med. #3</label>
+                                        <input type="text" placeholder={{cantidades3()}} [attr.disabled]="true">
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>Nombre Comercial Med. #3</label>
+                                        <input type="text"  placeholder={{nameComercial3()}} [attr.disabled]="true">
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>Laboratorio Fabricante Med. #3</label>
+                                        <input type="text" placeholder={{labo3()}} [attr.disabled]="true">
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+                            
+                    </div> 
+                </div>
+
+
+            </form>
+
+
+        </div>
+    </section>
+    <h2>Por favor espere a que sea aceptado su pedido</h2>
+</body>

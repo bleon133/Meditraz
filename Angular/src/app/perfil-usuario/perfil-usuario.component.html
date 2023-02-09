@@ -1,0 +1,56 @@
+<section class="request">
+    <section class="request"><div class="container">
+        <div class="topBox">
+            <button class="sumbit"  (click)="return()">
+                <i class="fa-solid fa-angle-left"></i>
+            </button><span class="title">Perfil</span>
+        </div>    
+        <form action="#">
+            <div class="field">
+                <div class="texto" id="element">
+                    {{nombres()}}
+                </div>
+
+                <div class="imgF" id="element">
+                    <img src="../../assets/usuario.png" >
+                </div>
+
+                <div class="texto" id="element">
+                    {{usuario()}}
+                </div>
+
+                <div class="texto" id="element">
+                    {{edadu()}}
+                </div>
+
+                <div id="element">
+                    <label for="email">Correo Eléctronico: </label><input type="text" required name="username" placeholder={{correo()}} [attr.disabled]="true" style="text-align: center;">
+                </div>
+                
+                <div id="element">
+                    <label for="number">Télefono: </label><input size="10px" type="text" required name="phone" placeholder={{telefono()}} [attr.disabled]="true" style="text-align: center;">
+                </div>
+
+                <div id="element">
+                    <label >Número del Carnet: </label>
+                    <input size="10px" type="text" required 
+                    name="ID" placeholder={{carnetNumero()}} [attr.disabled]="true" style="text-align: center;"> 
+                </div>
+
+                <div id="element">
+                    <label for="cedula">Cédula: </label><input size="10px" type="text" required name="cedula" placeholder={{cedula()}} [attr.disabled]="true" style="text-align: center;">
+                </div>
+                
+                <div id="element">
+                    <label for="text">Cargo: </label><input size="54px" type="cargo" required name="Charge" placeholder={{cargo()}} [attr.disabled]="true" style="text-align: center;">
+                </div>
+
+            </div><!--field-->                
+        </form>
+    </div>
+</section>
+
+
+
+
+

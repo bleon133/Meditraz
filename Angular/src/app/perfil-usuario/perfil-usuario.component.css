@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+}
+/* especificaciones de fondo */
+
+.request{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  width: 800px;
+  margin: auto;
+}
+
+.container{
+  position: relative;
+  width: 100%;
+  border-radius: 15px;
+  background: #fff;;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.3);
+}
+
+.container .topBox{
+  border-radius: 15px 15px 0 0;
+  background: linear-gradient(-135deg, #8621F8, #82F2EA);
+}
+
+.container .topBox button{
+  font-size:25px; 
+  background: none;
+  border: none;
+  position: relative;
+  padding-left: 3%;
+}
+
+.container .topBox button i{
+  color: #fff;
+}
+
+.title{
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 100px;
+  text-align: center;
+  color: #fff;
+  user-select: none;
+  padding-left: 38%;
+}
+
+.container{
+  position: relative;
+  max-width: 780px;
+  width: 100%;
+  border-radius: 15px;
+  background: #fff;;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.3);
+}
+
+.topBox{
+  border-radius: 15px 15px 0 0;
+
+}
+
+#element{
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+input{
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  font-size: 15px;
+  color: black;
+}

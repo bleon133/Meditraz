@@ -1,0 +1,30 @@
+
+<div class="menu-btn">
+	<i class="fas fa-bars"></i>
+</div>
+<div class="side-bar">
+		<div class='close-btn'>
+			<i class="fas fa-times"></i>
+		</div>
+		<div class="menu">
+			<div class="item"><a href="index.html"><i class="fa-solid fa-house"></i>Inicio</a></div>
+			<div class="item"><a (click)="onButtonRegister()"><i class="fa-solid fa-address-card"></i>Registrarse</a></div>
+			
+			<div class="item">
+
+				<a class="sub-btn"><i class="fa-solid fa-building"></i>Nosotros<i class="fas fa-angle-right dropdown"></i></a>
+				
+				<div class="sub-menu">
+					<a  (click)="nosotros()" class="sub-item">Quiénes Somos</a>
+					<a (click)="mision()" class="sub-item">Misión</a>
+					<a (click)="vision()" class="sub-item">Visión</a>
+					<a (click)="contacto()" class="sub-item">Contacto</a>
+				</div>
+			</div>
+		</div>
+</div>
+
+<section class="main">
+	<h1>MediTraz<br>Trazabilidad Segura<br><button (click)="onButtonLoggin()" class="login-btn" role="link" style="margin-top: 20px;">Iniciar Sesión</button></h1>
+</section>
+

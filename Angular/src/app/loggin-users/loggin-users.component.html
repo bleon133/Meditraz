@@ -1,0 +1,112 @@
+<mat-card>
+    <section class="register">
+        <div class="container">
+            <div class="topBox">
+                <button role="link" (click)="returnScreen()"><i class="fa-solid fa-angle-left"></i></button><span class="first-title">Crear Cuenta</span>
+            </div>
+        
+            <form [formGroup]="userForm" (keydown.enter)="$event.preventDefault()">
+            
+                <div class="form first">
+                    <div class="details personal">
+                        <span class="title">Información Personal</span>
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Nombres</label>
+                                <input type="text" matInput placeholder="Nombres" formControlName="name">
+                            </div>
+
+                            <div class="input-field">
+                                <label>Apellidos</label>
+                                <input type="text" matInput placeholder="Apellido(s)" formControlName="lastName">
+                            </div>
+
+                            <div class="input-field">
+                                <label>Fecha de Nacimiento</label>
+                                <input type="date" matInput placeholder="Fecha de Cumpleaños" formControlName="birthdate">
+                            </div>
+
+
+                            <div class="input-field">
+                                <label>Número de Télefono</label>
+                                <input type="text" matInput placeholder="Número de celular" formControlName="cellPhone">
+                            </div>
+
+                            <div class="input-field">
+                                <label>Género</label>
+                                <select  matInput placeholder="Género" formControlName="gender">
+                                    <option disabled selected>Seleccionar género</option>
+                                    <option value="Male">Masculino</option>
+                                    <option value="Female">Femenino</option>
+                                    <option value="Others">Otros</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Cédula</label>
+                                <input type="text" matInput placeholder="Ingresar Cédula" formControlName="identificationCard">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="details ID">
+                        <span class="title">Datos Institucionales</span>
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Correo electrónico</label>
+                                <input type="text" matInput placeholder="Correo Electrónico" formControlName="email">
+                            </div>
+
+                            <div class="input-field">
+                                <label>Carnet de la Empresa</label>
+                                <input type="text" matInput placeholder="Id Trabajador " formControlName="cardID">
+                            </div>
+
+                            <div class="input-field"> 
+                                <label>Cargo</label>
+                            
+                                <select matInput placeholder="Cargo" formControlName="idChargeUse">
+                                    <option disabled selected>Selec. cargo/área</option>
+                                    <option value = "1">Técnico Farmacéutico Registrador - Central de Mezclas</option>
+                                    <option value="2">Técnico Farmacéutico Despacho - Central de Mezclas</option>
+                                    <option value="3">Técnico Farmacéutico Registrador - Farmacia</option>
+                                    <option value="4">Técnico Farmacéutico Despacho - Farmacia</option>
+                                    <option value="5">Gerente - Gerencia</option>
+                                    <option value="6">Jefe de Enfermería - Servicio de Cirugía</option>
+                                    <option value="7">Químico Farmacéutico - Central de Mezclas</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Usuario</label>
+                                <input type="text" matInput placeholder="Nombre de Usuario" formControlName="username">
+                            </div>
+
+                            <div class="input-field">
+                                <label>Contraseña</label>
+                                <input type="password" matInput placeholder="Contraseña" formControlName="password">
+                            </div>
+
+                            <div class="input-field">
+                                <label>Repetir contraseña</label>
+                                <input type="password" matInput placeholder="Confirmar Contraseña" formControlName="rePassword">
+                            </div>
+                        </div>
+
+                        <div class="conditions">
+                            <input type="checkbox" id="cbox2" style="margin: 5px" value="termsAndConditions"/> <label for="cbox2"><a href="https://drive.google.com/file/d/1SkItD3IXLOK0XZOOFQyJYpkrmO2rbul0/view" target="_blank">Acepta los términos y condiciones</a></label>
+                        </div>
+                        <div class="buttons"> 
+                            <div class="field">
+                                <input type="submit" value="Registrar" (click)="enviar()"> <!-- boton de inicio -->
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </form>
+        </div>
+    </section>
+</mat-card>
+

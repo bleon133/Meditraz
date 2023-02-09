@@ -1,0 +1,105 @@
+
+<div class="menu-btn">
+    <i class="fas fa-bars"></i>
+</div>
+<div class="side-bar">
+    <div class='close-btn'>
+        <i class="fas fa-times"></i>
+    </div>
+    <div class="menu">
+        <div class="item"><a><i class="fa-solid fa-house"></i>Inicio</a></div>
+        <div class="item"><a (click)="perfil()"><i class="fa-solid fa-person"></i>Perfil de Usuario</a></div>
+        <div class="item">
+            <a class="sub-btn"><i class="fa-solid fa-clipboard-list"></i>Listas y Registros<i class="fas fa-angle-right dropdown"></i></a>
+            <div class="sub-menu">
+                <a (click)="listaMedicamentos()" class="sub-item">Lista Medicina</a>
+                <a (click)="listaEquipos()"class="sub-item">Lista Equipos</a>
+                <a  (click)="registroMedicinas()">Registro Medicina</a>
+                <a  (click)="registrarTransporte()">Registro Equipos</a>
+            </div>
+        </div>
+        <div class="item"><a (click)="solicitarMedicamento()"><i class="fa-solid fa-capsules"></i>Solicitar Medicina</a></div>
+        <div class="item">
+            <a class="sub-btn"><i class="fa-solid fa-person-walking"></i>Trazabilidad<i class="fas fa-angle-right dropdown"></i></a>
+            <div class="sub-menu">
+                <a  (click)="solicitudes()" class="sub-item">Solicitud Medicina</a>
+                <a (click)="gestionMedicina()" class="sub-item">Gestión Medicina</a>
+                <a (click)="medicinaCamino()" class="sub-item">Medicina Camino</a>
+                <a (click)="entregarMedicina()" class="sub-item">Entrega Medicina</a>
+                <a (click)="regresarEquipos()" class="sub-item">Regreso Equipo</a> 
+            </div>
+        </div>
+        <div class="item"><a (click)="service.logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i>Salir</a></div>
+    </div>
+</div>
+
+
+<!-- REGISTRO DE EQUIPOS -->
+<section>
+    <div class="Register"> 
+        <div class="forms"> 
+            <h1>Registro de Medicamentos</h1>
+            <form [formGroup]="medicineForm" (ngSubmit)="onSubmit()">
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Nombre comercial</label>
+                        <input type="text" formControlName="tradename">
+                    </div>
+                    <div class="input-field">
+                        <label>Codigo de Barras</label>
+                        <input type="text" formControlName="codeMedicine">
+                    </div>
+                    <div class="input-field">
+                        <label>Cantidad de Medicamento</label>
+                        <input type="number" formControlName="medicineEntryAmount">
+                    </div>
+                    <div class="input-field">
+                        <label>Fecha de vencimiento</label>
+                        <input type="date" formControlName="expirationDate">
+                    </div>
+                    <div class="input-field">
+                        <label>Temperatura de almacenamiento</label>
+                        <input type="number" formControlName="temperature">
+                    </div>
+                    <div class="input-field">
+                        <label>Laboratorio Fabricante</label>
+                        <input type="text" formControlName="laboratoryManufacturer">
+                    </div>
+                        <div class="input-field">
+                            <label>Lote</label>
+                            <input type="text" formControlName="lot">
+                        </div>
+                        <div class="input-field">
+                            <label>Area</label>
+                            <select required formControlName="idAreaMedic">
+                                <option value="1">Central de mezclas - 1</option>
+                                <option value="2">Central de mezclas - 2</option>
+                                <option value="3">Farmacia - 3</option>
+                                <option value="4">Farmacia - 4</option>
+                            </select>
+                        </div> <!--input-field-->
+                        
+                        <div class="input-field">
+                            <label>Especificaciones</label>
+                            <input type="text" formControlName="specificationMedic">
+                        </div>
+
+                </div><!--fields-->
+                <button class ="field" id="open">Registrar Medicamento</button>      
+            </form>
+        </div> <!--forms-->
+    </div><!--Register-->
+    <div class="imgFondo">
+        <img src="./assets/medicamentos.jpg" >
+
+    </div>
+</section> <!-- REGISTRO DE MEDICAMENTOS -->
+
+<div class="field">
+    <div class="modal-container" id="modal_container">
+        <div class="modal">
+            <p>¡Registro de medicamento exitoso!</p>
+            <button id="close">cerrar</button>
+        </div><!-- modal -->
+    </div>
+</div><!-- field -->
