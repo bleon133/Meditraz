@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+}
+/* especificaciones de fondo */
+body{
+    min-height: 100vh;
+    background: url(../img/background1.png)no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .format{
+    margin-left: 10%;
+    margin-top: 25px;
+    display: flex;
+    height: 90vh;
+    width: 80%;
+    background:#fff;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.3);
+  }
+
+  .format .usuario{
+      width: 50%;
+      text-align: center;
+      justify-content: center;
+  }
+  .format .usuario .titulo{
+      font-size: 40px;
+      margin-top: 65px;
+      margin-bottom: 25px;
+  }
+
+  .format .usuario .texto{
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+  .format .usuario .imgF img{
+      width: 100px;
+      height: 100px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+  }
+
+
+  .format .especificaciones-usuario{
+    display: absolute;
+    width:35%;
+    text-align: center;
+    justify-content: center;
+  }
+
+
+  .format .especificaciones-usuario .field{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 110px;
+    margin-left: 80px;
+  }
+
+
+  form .field .input-field{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 4px 16px;
+  }
+
+  .input-field label{
+    font-size: 14px;
+    font-weight: 500;
+    color: #2e2e2e;
+}

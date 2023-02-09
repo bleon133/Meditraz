@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Entrega Medicina</title>
+	<link rel="stylesheet" href="medicineOnTheWayRecorder2.css">
+</head>
+<body>
+	<section class="request">
+        <div class="container">
+            <div class="topBox">
+                <span class="first-title">Medicamentos en Camino</span>
+            </div>
+            <form>
+                <div class="form first">
+                    <div class="nurse and destination">
+                        <span class="title">Registro de Trazabilidada</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Nombre de Quién Entrega</label>
+                                <input type="text" matInput placeholder="Brayan León" formControlName="Enfermero" readonly=nurse readonly=»readonly»>
+                            </div>
+                            <div class="input-field">
+                                <label>Nombre de Quién Transporta</label>
+                                <input type="text" matInput placeholder="Santiago Sanchéz" formControlName="zona" readonly=zone readonly=»readonly»>
+                            </div>
+                            <div class="input-field">
+                                <label>Nombre de Quién Recibirá</label>
+                                <input type="number" matInput placeholder="Patricia Vidal" formControlName="numero" readonly=number readonly=»readonly»>
+                            </div>
+                            <div class="input-field">
+                                <label>Área de Salida</label>
+                                <input type="text" matInput placeholder="Farmacia/1" formControlName="Enfermero" readonly=nurse readonly=»readonly»>
+                            </div>
+                            <div class="input-field">
+                                <label>Área de Recepción</label>
+                                <input type="text" matInput placeholder="Quirofano/1" formControlName="zona" readonly=zone readonly=»readonly»>
+                            </div>
+                            <div class="input-field">
+                                <label>Transporte del Medicamento</label>
+                                <input type="number" matInput placeholder="Cava" formControlName="numero" readonly=number readonly=»readonly»>
+                            </div>
+
+                        </div>    
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <h2>Por favor espere, el medicamento pronto llegará a su destino Final.</h2>
+</body>
+</html>

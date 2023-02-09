@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestión Medicina</title>
+    <link rel="stylesheet" href="medicineManagementRecorder2.css">
+</head>
+<body>
+    <section class="request">
+        <div class="container">
+            <div class="topBox">
+                <span class="first-title">Gestionar Medicamentos</span>
+            </div>
+            <form>
+                <div class="form first">
+                    <div class="nurse and destination">
+                        <span class="title">Pedidos de Medicamentos</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Cantidad Med. #1</label>
+                                <input type="number" matInput placeholder="100" formControlName="amount1" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Nombre Comercial - Laboratorio</label>
+                                <input type="text" matInput placeholder="Furoato - Avamys" formControlName="tradename1" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Código Med. 1</label>
+                                <input type="number" placeholder="Escanea el código" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Cantidad Med. #2</label>
+                                <input type="number" matInput placeholder="140" formControlName="amount2" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Nombre Comercial - Laboratorio</label>
+                                <input type="text" matInput placeholder="Furoato - Avamys" formControlName="tradename2" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Código Med. 2</label>
+                                <input type="number" placeholder="Escanea el código" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Cantidad Med. #3</label>
+                                <input type="number" matInput placeholder="140" formControlName="amount3" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Nombre Comercial - Laboratorio</label>
+                                <input type="text" matInput placeholder="Furoato - Avamys" formControlName="tradename3" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Código Med. 3</label>
+                                <input type="number" placeholder="Escanea el código" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Nombre de Quién Entrega</label>
+                                <input type="text" matInput placeholder="Brayan León" formControlName="tecnic" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Nombre de Quién Transporta</label>
+                                <select required>
+                                    <option disabled selected>Seleccionar nombre</option>
+                                    <option>Santiago Sanchéz</option>
+                                    <option>Juliana Rodríguez</option>
+                                    <option>David López</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Nombre de Quién Recibirá</label>
+                                <input type="text" matInput placeholder="Patricia Vidal" formControlName="tradename1" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Área de Salida</label>
+                                <select required>
+                                    <option disabled selected>Seleccionar nombre</option>
+                                    <option>Farmacia/1</option>
+                                    <option>Farmacia/2</option>
+                                    <option>Central de Mezclas/1</option>
+                                    <option>Central de Mezclas/2</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Área de Recepción</label>
+                                <input type="number" placeholder="Quirofano/1" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Transporte del Medicamento</label>
+                                <select required>
+                                    <option disabled selected>Seleccionar equipo</option>
+                                    <option>Cava</option>
+                                    <option>Cava electrónica</option>
+                                    <option>Cava icopor</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="buttons"> 
+                            <button class="sumbit">
+                                    <span class="btnText">Medicamento en Camino</span>
+                                    <i class="uil uil-navigator"></i>
+                            </button>
+                        </div>   
+                    </div> 
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Solicitar Medicamentos</title>
+    <link rel="stylesheet" href="requestMedication.css">
+</head>
+<body>
+    <section class="request">
+        <div class="container">
+            <div class="topBox">
+                <span class="first-title">Solicitar Medicamentos</span>
+            </div>
+            <form>
+                <div class="form first">
+                    <div class="nurse and destination">
+                        <span class="title">Jefe de Enfermería y Destino</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Jefe de Enfermería</label>
+                                <select  matInput placeholder="Enfermero" formControlName="nurse">
+                                    <option disabled selected>Selec. Enfermero</option>
+                                    <option value = "1">Patricia Vidal</option>
+                                    <option value = "2">Santiago Sanchéz</option>
+                                    <option value = "3">Jualiana Rodríguez</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label>Zona</label>
+                                <select  matInput placeholder="zona" formControlName="zone">
+                                    <option disabled selected>Selec. zona</option>
+                                    <option value = "1">Quirófano</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label>Número de Quirófano</label>
+                                <select  matInput placeholder="numero" formControlName="number">
+                                    <option disabled selected>Selec. Número</option>
+                                    <option value = "1">1</option>
+                                    <option value = "2">2</option>
+                                    <option value = "3">1</option>
+                                </select>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="medication order">
+                        <span class="title">Pedidos de Medicamentos</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Cantidad Med. #1</label>
+                                <input type="number" matInput placeholder="Digitar cantidad" formControlName="amount3">
+                            </div>
+                            <div class="input-field">
+                                <label>Nombre Comercial - Laboratorio Med. #1</label>
+                                <select  matInput placeholder="nombreComercial3" formControlName="tradename3">
+                                    <option disabled selected>Selec. Nombre / Lab</option>
+                                    <option value = "1">Furoato de Fluticasona - Avamys</option>
+                                    <option value = "2">Fluticasone Furoate - Avamys</option>
+                                    <option value = "3">acetaminofen - MK</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label>Cantidad Med. #2</label>
+                                <input type="number" matInput placeholder="Digitar cantidad" formControlName="amount3">
+                            </div>
+                            <div class="input-field">
+                                <label>Nombre Comercial - Laboratorio Med. #2</label>
+                                <select  matInput placeholder="nombreComercial3" formControlName="tradename3">
+                                    <option disabled selected>Selec. Nombre / Lab</option>
+                                    <option value = "1">Furoato de Fluticasona - Avamys</option>
+                                    <option value = "2">Fluticasone Furoate - Avamys</option>
+                                    <option value = "3">acetaminofen - MK</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label>Cantidad Med. #3</label>
+                                <input type="number" matInput placeholder="Digitar cantidad" formControlName="amount3">
+                            </div>
+                            <div class="input-field">
+                                <label>Nombre Comercial - Laboratorio Med. #3</label>
+                                <select  matInput placeholder="nombreComercial3" formControlName="tradename3">
+                                    <option disabled selected>Selec. Nombre / Lab</option>
+                                    <option value = "1">Furoato de Fluticasona - Avamys</option>
+                                    <option value = "2">Fluticasone Furoate - Avamys</option>
+                                    <option value = "3">acetaminofen - MK</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="buttons"> 
+                            <button class="sumbit" role="link" onclick="location.href='indexLogged.html'">
+                                <span class="btnText">Crear</span>
+                            </button>
+                        </div>
+                    </div> 
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

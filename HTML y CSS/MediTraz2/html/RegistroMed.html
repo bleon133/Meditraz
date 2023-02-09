@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../img/icono1.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Medicamentos</title>
+    <link rel="stylesheet" href="../css/estilosRegMed.css">
+    <link rel="stylesheet" href="../plugins/sweetalert2/sweetalert2.css">
+</head>
+<body>
+    <!-- DROPDOWN MENU -->
+	<div class="menu-btn">
+		<i class="fas fa-bars"></i>
+	</div>
+	<div class="side-bar">
+		<div class='close-btn'>
+			<i class="fas fa-times"></i>
+		</div>
+		<div class="menu">
+			<div class="item"><a href="indexLogged.html"><i class="fa-solid fa-house"></i>Inicio</a></div>
+			<div class="item">
+				<a class="sub-btn"><i class="fa-solid fa-info-circle"></i>Nosotros<i class="fas fa-angle-right dropdown"></i></a>
+				<div class="sub-menu">
+					<a href="#" class="sub-item">Quiénes Somos</a>
+					<a href="#" class="sub-item">Misión</a>
+					<a href="#" class="sub-item">Visión</a>
+					<a href="#" class="sub-item">Contacto</a>
+				</div>
+			</div>
+			<div class="item">
+				<a class="sub-btn"><i class="fa-solid fa-info-circle"></i>Listas y Registros<i class="fas fa-angle-right dropdown"></i></a>
+				<div class="sub-menu">
+					<a href="#" class="sub-item">Lista de Med.</a>
+					<a href="#" class="sub-item">Lista de Equipos</a>
+					<a href="#" class="sub-item">Registro de Med.</a>
+					<a href="#" class="sub-item">Registro de Equipos</a>
+				</div>
+			</div>
+			<div class="item"><a href="#"><i class="fa-solid fa-mobile-screen"></i>Solicitar Med.</a></div>
+			<div class="item">
+				<a class="sub-btn"><i class="fa-solid fa-info-circle"></i>Trazabilidad<i class="fas fa-angle-right dropdown"></i></a>
+				<div class="sub-menu">
+					<a href="#" class="sub-item">Solicitud de Med.</a>
+					<a href="#" class="sub-item">Gestión de Med.</a>
+					<a href="#" class="sub-item">Med. en Camino</a>
+					<a href="#" class="sub-item">Entrega de Med.</a>
+					<a href="#" class="sub-item">Regreso de Equipo</a>
+				</div>
+			</div>
+			<div class="item"><a href="#"><i class="fa-solid fa-mobile-screen"></i>Historial</a></div>
+			<div class="item"><a href="index.html"><i class="fa-solid fa-mobile-screen"></i>Salir</a></div>
+		</div>
+	</div><!-- DROPDOWN MENU -->
+
+<!-- REGISTRO DE EQUIPOS -->
+    <section>
+
+        <div class="Register">
+            <div class="forms">
+                
+            <h1>Registro de Medicamentos</h1>
+
+            <form action="#">
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nombre comercial</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Fecha de vencimiento</label>
+                            <input type="date">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Temperatura de almacenamiento</label>
+                            <input type="number">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Laboratorio Fabricante</label>
+                            <select required>
+                                <option>Alphapharm Pty Ltd</option>
+                                <option>Amersham Health Inc.</option>
+                                <option>Baker Norton</option>
+                                <option>Bayer Corporation</option>
+                                <option>Canyon</option>
+                                <option>Cell Therapeutics, Inc.</option>
+                                <option>Davis and Geck</option>
+                                <option>Dexcel Ltd</option>
+                                <option>Elkins Sinn</option>
+                                <option>Falcon Pharms</option>
+                            </select>
+                            </div> <!--input-field-->
+
+                            <div class="input-field">
+                                <label>Lote</label>
+                                <input type="number">
+                            </div>
+
+                            <div class="input-field">
+                                <label>Area</label>
+                                <select required>
+                                    <option>Central de mezclas</option>
+                                    <option>Farmacia 1piso</option>
+                                    <option>Urgencias</option>
+                                    <option>Pediatria</option>
+                                    <option>UCI</option>
+                                </select>
+                            </div> <!--input-field-->
+
+                            <div class="input-field">
+                                    <label>Especificaciones de almacenamiento</label>
+                                    <select required>
+                                        <option>Temperatura controlada</option>
+                                        <option>Almacenar en lugar oscuro
+                                        </option>
+                                        <option>Humedad controlada</option>
+                                    </select>
+                            </div> <!--input-field-->
+                            
+
+					</div><!--fields-->
+
+					<button class ="field" id="btnRegistrarMed">Ingresar</button>      
+					
+            </form>
+			
+                    </div> <!--forms-->
+        
+                    </div><!--Register-->
+            
+
+
+            </div>
+            
+        </div>
+
+        <div class="imgFondo">
+            <img src="../img/medicamentos.jpg" >
+ 
+        </div>
+    </section> <!-- REGISTRO DE MEDICAMENTOS -->
+
+
+
+    <!--Scripts de java-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../plugins/sweetalert2/sweetalert2.min.js"></script>
+    <script src="../js/app.js"></script>
+      
+</body>
+</html>

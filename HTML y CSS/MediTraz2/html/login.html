@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="icon" href="../img/icono1.png">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión en Meditraz</title> <!-- titulo de la pestaña -->
+    <link rel="stylesheet" href="../css/estilosLogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+  </head>
+    <body> 
+      <!-- dropdown menu -->
+      <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+      </div>
+      <div class="side-bar">
+        <div class='close-btn'>
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="menu">
+          <div class="item"><a href="index.html"><i class="fa-solid fa-house"></i>Inicio</a></div>
+          <div class="item">
+            <a class="sub-btn"><i class="fa-solid fa-info-circle"></i>Nosotros<i class="fas fa-angle-right dropdown"></i></a>
+            <div class="sub-menu">
+              <a href="#" class="sub-item">Quiénes Somos</a>
+              <a href="#" class="sub-item">Misión</a>
+              <a href="#" class="sub-item">Visión</a>
+            </div>
+          </div>
+          <div class="item"><a href="#"><i class="fa-solid fa-mobile-screen"></i>Contacto</a></div>
+        </div>
+      </div>
+
+      <!-- login -->
+      <section class="login">
+        <div class="wrapper"><!-- contenedor global -->
+          <div class="title">
+            Iniciar sesión
+          </div>
+          <form action="#"><!--cambia el # por el lugar donde quieres que llegue la info -->
+            <div class="field">
+                <input type="text" required name="username">
+                <label for="email">Usuario</label>
+            </div>
+            <div class="field">
+                <input type="password" required name="password">
+                <label for="password">Contraseña</label>
+            </div>
+            <div class="content">
+              <div class="pass-link"><!-- enlace para cambiar clave -->
+                <a href="NewPassword.html">¿Olvidaste tu contraseña?</a>
+              </div>
+
+
+
+              <div class="field">
+                <input type="submit" value="Entrar" onclick="location.href='indexLogged.html'"> <!-- boton de inicio -->
+              </div>
+
+              
+              <div class="signup-link"> <!-- enlace al registro -->
+                  <a href="signup.html">Crear Cuenta</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <script type="text/javascript">
+        $(document).ready(function(){
+          //jquery for toggle sub menus
+          $('.sub-btn').click(function(){
+            $(this).next('.sub-menu').slideToggle();
+            $(this).find('.dropdown').toggleClass('rotate');
+          })
+
+          //jquery for expand and collage the sidebar
+          $('.menu-btn').click(function(){
+            $('.side-bar').addClass('active');
+            $('.menu-btn').css("visibility", "hidden")
+          })
+
+          $('.close-btn').click(function(){
+            $('.side-bar').removeClass('active');
+            $('.menu-btn').css("visibility", "visible")
+          })
+        })
+      </script>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="../img/icono1.png">
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Meditraz</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+	<div class="menu-btn">
+		<i class="fas fa-bars"></i>
+	</div>
+	<div class="side-bar">
+		<div class='close-btn'>
+			<i class="fas fa-times"></i>
+		</div>
+		<div class="menu">
+			<div class="item"><a href="index.html"><i class="fa-solid fa-house"></i>Inicio</a></div>
+			<div class="item">
+				<a class="sub-btn"><i class="fa-solid fa-info-circle"></i>Nosotros<i class="fas fa-angle-right dropdown"></i></a>
+				<div class="sub-menu">
+					<a href="#" class="sub-item">Quiénes Somos</a>
+					<a href="#" class="sub-item">Misión</a>
+					<a href="#" class="sub-item">Visión</a>
+					<a href="#" class="sub-item">Contacto</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="main">
+		<h1>MediTraz<br>Trazabilidad Segura<br><button class="login-btn" role="link" onclick="location.href='login.html'" >Iniciar Sesión</button></h1>
+	</section>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//jquery for toggle sub menus
+			$('.sub-btn').click(function(){
+				$(this).next('.sub-menu').slideToggle();
+				$(this).find('.dropdown').toggleClass('rotate');
+			})
+
+			//jquery for expand and collage the sidebar
+			$('.menu-btn').click(function(){
+				$('.side-bar').addClass('active');
+				$('.menu-btn').css("visibility", "hidden")
+			})
+
+			$('.close-btn').click(function(){
+				$('.side-bar').removeClass('active');
+				$('.menu-btn').css("visibility", "visible")
+			})
+		})
+	</script>
+</body>
+</html>

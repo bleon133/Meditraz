@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestión de Medicamentos</title>
+    <link rel="stylesheet" href="medicineManagementoffice.css">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <header>Gestión de Medicamentos</header>
+            <form action="#">
+                <div class="form first">
+                    <div class="details personal">
+                        <span class="title">Pedidos de Medicamentos</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Cantidad Med. #1</label>
+                                <input type="number" matInput placeholder="100" formControlName="amount1" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Nombre Comercial Med. #1</label>
+                                <input type="text" matInput placeholder="Furoato de Fluticasona" formControlName="tradename1" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Laboratorio Fabricante Med. #1</label>
+                                <input type="text" matInput placeholder="Avamys" formControlName="laboratory1" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Cantidad Med. #2</label>
+                                <input type="number" matInput placeholder="140" formControlName="amount2" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Nombre Comercial Med. #2</label>
+                                <input type="text" matInput placeholder="Fluticasone Furoate" formControlName="tradename2" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Laboratorio Fabricante Med. #2</label>
+                                <input type="text" matInput placeholder="Avamys" formControlName="laboratory2" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Cantidad Med. #3</label>
+                                <input type="number" matInput placeholder="180" formControlName="amount3" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Nombre Comercial Med. #3</label>
+                                <input type="text" matInput placeholder="acetaminofen" formControlName="tradename2" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Laboratorio Fabricante Med. #3</label>
+                                <input type="text" matInput placeholder="MK" formControlName="laboratory3" readonly=»readonly»>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details ID">
+                        <span class="title">Comprobante de Medicamentos</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Código Med. 1</label>
+                                <input type="number" placeholder="Escanea el código" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Código Med. 2</label>
+                                <input type="number" placeholder="Escanea el código" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Código Med. 3</label>
+                                <input type="number" placeholder="Escanea el código" required>
+                            </div>
+
+                            <button class="nextBtn">
+                                <span class="btnText">Siguiente</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form second">
+                    <div class="details address">
+                        <span class="title">Registro de Trazabilidad</span>
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Nombre de Quién Entrega</label>
+                                <select required>
+                                    <option disabled selected>Seleccionar nombre</option>
+                                    <option>Brayan León</option>
+                                    <option>Edwin Cordoba</option>
+                                    <option>Laura Moreno</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Nombre de Quién Transporta</label>
+                                <select required>
+                                    <option disabled selected>Seleccionar nombre</option>
+                                    <option>Santiago Sanchéz</option>
+                                    <option>Juliana Rodríguez</option>
+                                    <option>David López</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Nombre de Quién Recibirá</label>
+                                <input type="text" matInput placeholder="Patricia Vidal" formControlName="tradename1" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Área de Salida</label>
+                                <select required>
+                                    <option disabled selected>Seleccionar nombre</option>
+                                    <option>Farmacia/1</option>
+                                    <option>Farmacia/2</option>
+                                    <option>Central de Mezclas/1</option>
+                                    <option>Central de Mezclas/2</option>
+                                </select>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Área de Recepción</label>
+                                <input type="number" placeholder="Quirofano/1" readonly=»readonly»>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Transporte del Medicamento</label>
+                                <select required>
+                                    <option disabled selected>Seleccionar equipo</option>
+                                    <option>Cava</option>
+                                    <option>Cava electrónica</option>
+                                    <option>Cava icopor</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="details family">
+                        <span class="title">Seguridad del Medicamento</span>
+
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>¿El equipo se encuentra a una correcta temperatura?</label>
+                                <div class="radio-container" id="div-radio">
+                                    <div class="container2" id="div-radio">
+                                        <span class="span2">Si</span>
+                                        <input type="radio" id="input-1" name="verdadero-falso1" class="radio-input" />
+                                        <label for="input-1" class="radio"></label>
+                                    </div>
+                                    <div class="container2" id="div-radio">
+                                        <span class="span2">No</span>
+                                        <input type="radio" id="input-2" name="verdadero-falso1" class="radio-input" />
+                                        <label for="input-2" class="radio"></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <label>¿El equipo cumple con las especificaciones del equipo?</label>
+                                <div class="radio-container" id="div-radio">
+                                    <div class="container2" id="div-radio">
+                                        <span class="span2">Si</span>
+                                        <input type="radio" id="input-3" name="verdadero-falso2" class="radio-input" />
+                                        <label for="input-3" class="radio"></label>
+                                    </div>
+                                    <div class="container2" id="div-radio">
+                                        <span class="span2">No</span>
+                                        <input type="radio" id="input-4" name="verdadero-falso2" class="radio-input" />
+                                        <label for="input-4" class="radio"></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <label>¿El medicamento se encuentra correctamente sellado?</label>
+                                <div class="radio-container" id="div-radio">
+                                    <div class="container2" id="div-radio">
+                                        <span class="span2">Si</span>
+                                        <input type="radio" id="input-5" name="verdadero-falso3" class="radio-input" />
+                                        <label for="input-5" class="radio"></label>
+                                    </div>
+                                    <div class="container2" id="div-radio">
+                                        <span class="span2">No</span>
+                                        <input type="radio" id="input-6" name="verdadero-falso3" class="radio-input" />
+                                        <label for="input-6" class="radio"></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="input-field">
+                                <label>¿El equipo se encuentra correctamente sellado?</label>
+                                <div class="radio-container" id="div-radio">
+                                    <div class="container2" id="div-radio">
+                                        <span class="span2">Si</span>
+                                        <input type="radio" id="input-7" name="verdadero-falso4" class="radio-input" />
+                                        <label for="input-7" class="radio"></label>
+                                    </div>
+                                    <div class="container2" id="div-radio">
+                                        <span class="span2">No</span>
+                                        <input type="radio" id="input-8" name="verdadero-falso4" class="radio-input" />
+                                        <label for="input-8" class="radio"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="buttons">
+                            <div class="backBtn">
+                                <span class="btnText">Atrás</span>
+                            </div>
+                            
+                            <button class="sumbit">
+                                <span class="btnText">Medicamento en Camino</span>
+                            </button>
+                        </div>
+                    </div> 
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="medicineManagementOffice.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Solicitud Medicina</title>
+    <link rel="stylesheet" href="requestsRecorder2.css">
+</head>
+<body>
+    <section class="request">
+        <div class="container">
+            <div class="topBox">
+                <span class="first-title">Solicitar Medicamentos</span>
+            </div>
+            <form>
+                <div class="form first">
+                    <div class="nurse and destination">
+                        <span class="title">Jefe de Enfermería y Destino</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Jefe de Enfermería</label>
+                                <input type="text" matInput placeholder="Patricia Vidal" formControlName="Enfermero" readonly=nurse readonly=»readonly»>
+                            </div>
+                            <div class="input-field">
+                                <label>Zona</label>
+                                <input type="text" matInput placeholder="Quirófano" formControlName="zona" readonly=zone readonly=»readonly»>
+                            </div>
+                            <div class="input-field">
+                                <label>Número de Quirófano</label>
+                                <input type="number" matInput placeholder="1" formControlName="numero" readonly=number readonly=»readonly»>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="medication order">
+                        <span class="title">Pedidos de Medicamentos</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Cantidad Med. #1</label>
+                                <input type="number" matInput placeholder="100" formControlName="amount1" readonly=»readonly»>
+                            </div>
+                            <div class="input-field">
+                                <label>Nombre Comercial Med. #1</label>
+                                <input type="text" matInput placeholder="Furoato de Fluticasona" formControlName="tradename1" readonly=»readonly»>
+                            </div>
+                            <div class="input-field">
+                                <label>Laboratorio Fabricante Med. #1</label>
+                                <input type="text" matInput placeholder="Avamys" formControlName="laboratory1" readonly=»readonly»>
+                            </div>
+                            <div class="input-field">
+                                <label>Cantidad Med. #2</label>
+                                <input type="number" matInput placeholder="140" formControlName="amount2" readonly=»readonly»>
+                            </div>
+                            <div class="input-field">
+                                <label>Nombre Comercial Med. #2</label>
+                                <input type="text" matInput placeholder="Fluticasone Furoate" formControlName="tradename2" readonly=»readonly»>
+                            </div>
+                            <div class="input-field">
+                                <label>Laboratorio Fabricante Med. #2</label>
+                                <input type="text" matInput placeholder="Avamys" formControlName="laboratory2" readonly=»readonly»>
+                            </div>
+                            <div class="input-field">
+                                <label>Cantidad Med. #3</label>
+                                <input type="number" matInput placeholder="180" formControlName="amount3" readonly=»readonly»>
+                            </div>
+                            <div class="input-field">
+                                <label>Nombre Comercial Med. #3</label>
+                                <input type="text" matInput placeholder="acetaminofen" formControlName="tradename2" readonly=»readonly»>
+                            </div>
+                            <div class="input-field">
+                                <label>Laboratorio Fabricante Med. #3</label>
+                                <input type="text" matInput placeholder="MK" formControlName="laboratory3" readonly=»readonly»>
+                            </div>
+                        </div>
+                        <div class="buttons"> 
+                            <button class="sumbit">
+                                    <span class="btnText">Gestionar Medicamentos</span>
+                                    <i class="uil uil-navigator"></i>
+                            </button>
+                        </div>
+                    </div> 
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
