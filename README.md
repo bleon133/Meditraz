@@ -54,7 +54,7 @@ Meditraz es una aplicación web diseñada como prototipo académico para la traz
 
 <!-- Inserta aquí capturas de la interfaz: formularios de registro, listas de medicamentos, alertas de caducidad, etc. -->
 
-![Listado de Medicamentos](./screenshots/listado-medicamentos.png)
+![Listado de Medicamentos](./screenshots/Meditraz.png)
 ![Detalle de Medicamento](./screenshots/detalle-medicamento.png)
 
 ## Origen académico
