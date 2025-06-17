@@ -38,9 +38,9 @@ Meditraz es una aplicación web diseñada como prototipo académico para la traz
 
 3. **Configuración de la API backend:**
 
-   * Asegúrate de tener una instancia de SQL Server en ejecución.
-   * Crea la base de datos `MeditrazDB` y ejecuta los scripts de inicialización (disponibles en la documentación académica).
-   * En el archivo `src/environments/environment.ts`, actualiza `apiUrl` con la URL de tu API ASP.NET Core.
+* Asegúrate de tener una instancia de SQL Server en ejecución.
+* Crea la base de datos `MeditrazDB` y ejecuta los scripts de inicialización (disponibles en la documentación académica).
+* En el archivo `src/environments/environment.ts`, actualiza `apiUrl` con la URL de tu API ASP.NET Core.
 
 4. **Levantar la aplicación Angular:**
 
@@ -61,9 +61,17 @@ Meditraz es una aplicación web diseñada como prototipo académico para la traz
 
 ## Origen académico
 
-Este proyecto formó parte de un estudio de Ingeniería Biomédica de la Universidad Autónoma de Bucaramanga (UNAB). Los detalles de diseño y resultados se encuentran en la publicación:
+Este proyecto formó parte de un estudio de Ingeniería Biomédica de la Universidad Autónoma de Bucaramanga (UNAB). Los detalles de diseño, metodología y resultados se encuentran en la publicación:
 
-> Pardo, A., & León, B. (2023). "Prototipo de sistema de trazabilidad de medicamentos basado en Angular y ASP.NET Core". *Repositorios Académicos UNAB*.
+> Pardo, A., & León, B. (2023). "Prototipo de sistema de trazabilidad de medicamentos basado en Angular y ASP.NET Core". *Repositorios Académicos UNAB*. Disponible en: [https://repository.unab.edu.co/bitstream/handle/20.500.12749/20899/2022\_Articulo\_Leon\_Martinez\_Brayan\_Steven.pdf](https://repository.unab.edu.co/bitstream/handle/20.500.12749/20899/2022_Articulo_Leon_Martinez_Brayan_Steven.pdf?sequence=3)
+
+**Resumen del artículo:**
+
+* Se define el *objetivo* de crear un prototipo funcional para la trazabilidad de medicamentos.
+* Se presenta la *arquitectura* de la solución: frontend en Angular, API REST en ASP.NET Core y base de datos SQL Server.
+* Se detalla el *diseño de la base de datos* y los *métodos de escaneo* de códigos de barras.
+* Se describen las *pruebas de validación* del prototipo, incluyendo usabilidad y detección de caducidad.
+* Los *resultados* muestran la eficacia del sistema en la gestión de inventario y la generación de alertas, con mejoras significativas en la precisión del control de stock.
 
 ## Contribuciones
 
