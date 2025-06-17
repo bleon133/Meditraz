@@ -75,8 +75,13 @@ Este proyecto formó parte de un estudio de Ingeniería Biomédica de la Univers
 
 ## Contribuciones
 
-* **Brayan S. León M.** – Desarrollo del frontend en Angular y documentación.
-* **Equipo de Ingeniería Biomédica UNAB** – Diseño de base de datos y especificaciones del flujo de trazabilidad.
+**Investigación en Curso**
+
+* **Brayan Steven León Martínez** (Ingeniería Biomédica) – [bleon133@unab.edu.co](mailto:bleon133@unab.edu.co) – Universidad Autónoma de Bucaramanga
+* **Patricia Daniela Vidal Paredes** (Ingeniería Biomédica) – [pvidal115@unab.edu.co](mailto:pvidal115@unab.edu.co) – Universidad Autónoma de Bucaramanga
+* **Santiago Sánchez Bahamon** (Ingeniería Biomédica) – [ssanchez495@unab.edu.co](mailto:ssanchez495@unab.edu.co) – Universidad Autónoma de Bucaramanga
+* **Gabriela Barbosa Ropero** (Ingeniería Biomédica) – [gbarbosa160@unab.edu.co](mailto:gbarbosa160@unab.edu.co) – Universidad Autónoma de Bucaramanga
+* **Edwin Javier Córdoba Vanegas** (Ingeniería de Sistemas) – [ecordoba263@unab.edu.co](mailto:ecordoba263@unab.edu.co) – Universidad Autónoma de Bucaramanga
 
 ## Licencia
 
